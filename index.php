@@ -2,7 +2,8 @@
 
 declare(strict_types = 1);
 
-$root = dirname(__DIR__) . DIRECTORY_SEPARATOR;
+$title = "index";
+$root = __DIR__ . DIRECTORY_SEPARATOR;
 
 define('APP_PATH', $root . 'app' . DIRECTORY_SEPARATOR);
 define('FILES_PATH', $root . 'transaction_files' . DIRECTORY_SEPARATOR);
@@ -10,8 +11,18 @@ define('VIEWS_PATH', $root . 'views' . DIRECTORY_SEPARATOR);
 
 /* HIER CODE (zie de instructies op Blackboard) */
 
+require_once (APP_PATH . 'App.php');
+include_once('includes/header.php');
+
+$files = scandir(FILES_PATH);
+
+echo "<h2><b>Eenvoudige Pagina voor het lezen van data-bestanden</b></h2>";
+echo "<p>Je ziet hier een lijst met alle beschikbare csv bestanden. Klik op een bestand om de data te benaderen.</p>";
+
+echo show_filelist($files);
 
 
+//fgetcsv();
 /*
 Bij deze opdracht maken we een eenvoudige pagina die data-bestanden in kan lezen en de daarin opgenomen data als html-pagina weer kan geven.
 
@@ -33,3 +44,5 @@ Zorg ervoor dat datum als bijvoorbeeld "4 januari 2021" weergegeven wordt.
 Toon inkomensbedragen in groene kleur & toon uitgavenbedragen in rood
 Maak gebruik van Bootstrap om er een mooi geheel van te maken.
 */
+
+include_once('includes/footer.php');
