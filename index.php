@@ -22,7 +22,6 @@ echo "<p>Je ziet hier een lijst met alle beschikbare csv bestanden. Klik op een 
 echo show_filelist($files);
 
 
-//fgetcsv();
 /*
 Bij deze opdracht maken we een eenvoudige pagina die data-bestanden in kan lezen en de daarin opgenomen data als html-pagina weer kan geven.
 
