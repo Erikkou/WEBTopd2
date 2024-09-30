@@ -48,7 +48,8 @@ function format_data($file) {
             // Jammerlijk genoeg omdat dit als comma in een cijfer staat waar een punt moet.
             // Ik controleer of er toch een tweede element in de array staat en voeg deze ook toe aan de string.
             if (isset($lines[$line+1])) {
-                $string_line .= '.' . $lines[$line+1];
+                // Waarom hier een nul erbij? Geen idee, maar het werkt.
+                $string_line .= '.' . $lines[$line+1] . '0';
             }
             // De euro tekens werden niet herkend. Het lukte mij op dit moment niet goed om ze weg te halen.
             // Met deze code verdwenen ze dus leek opgelost. Later gaf dit alsnog problemen.
