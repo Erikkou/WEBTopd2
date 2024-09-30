@@ -7,6 +7,7 @@ $file = $root . 'transaction_files' . DIRECTORY_SEPARATOR . $_GET['file'];
 
 require_once ($root . DIRECTORY_SEPARATOR . 'App' . DIRECTORY_SEPARATOR . 'App.php');
 
+// Ik voeg hier de header toe uit de header.php file. De opmaak is daardoor hetzelfde als bij index.php.
 include_once ($root . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . 'header.php');
 ?>
 
@@ -44,5 +45,5 @@ include_once ($root . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR . '
 </div>
 
 <?php
-
+// De footer zorgt dat de header goed wordt beëindigd.
 include_once ('../includes/footer.php');
